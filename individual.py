@@ -4,7 +4,8 @@
 
 def prod(*nums):
     if nums:
-        max_elem_index = [abs(i) for i in nums].index(max([abs(i) for i in nums]))
+        abs_nums = [abs(i) for i in nums]
+        max_elem_index = abs_nums.index(max(abs_nums))
         res = 1
 
         for i in nums[max_elem_index + 1 :]:
